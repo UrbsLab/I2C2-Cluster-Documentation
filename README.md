@@ -6,6 +6,7 @@
 - [Introduction](#introduction)
   - [LPC](#lpc)
   - [I2C2](#i2c2)
+    - [I2C2 Mailing List](#i2c2-mailing-list)
 - [Getting Started (all new users)](#getting-started)
 - [Logging Into The LPC](#logging-into-the-lpc)
   - [Logging in from Linux:](#logging-in-from-linux)
@@ -36,6 +37,11 @@ Each user of the LPC is set up with a home directory within which they can put t
 In order to use the LPC you will need to learn how to access it, how to navigate to your home directory, basic unix/linux commands, how to set up your ‘environment’ (so that the software, coding languages, and packages you will need are available to run your job, how to submit a job to a queue, how to manage and monitor your jobs, and best practices for LPC use.
 ### I2C2
 The Informatics Investigator Computing Cluster (I2C2) is a subset of computing resources located within the LPC collaboratively purchased and utilized by a group of informatics faculty stakeholders (at UPenn) with access granted by these stakeholders to students, staff, and occasional collaborators associated with their respective labs. While the purchase and maintenence of this resouce is funded by the stakeholders, there is no additional cost to running individual computing jobs or for data storage space (up to the aloted storage space each faculty member has requested). As of 11/6/2020, this resource does not meet the strict requirements for HIPPA security to protect sensitive patient data, however this is expected to change in the future. This makes it an excellent place to test out code before running it on other secure computing resources, or run processes not working with sensitive patient data. Both CPU and GPU processors are available in I2C2. Once you set up an I2C2 account you will have access to it's resources once you log onto an appropriate LPC server.
+#### I2C2 Mailing List
+In order to facilitate communication between stakeholders and users of I2C2, a UPenn mailing list has been set up to set up meetings, make announcements, ask questions and inform each other about planned computationally intensive cluster use. Please seek to use this mailing list somewhat sparingly.
+You must request access to this mailing list if you are not already on it. This mailing list is managed by Kenneth Hassinger (khas@pennmedicine.upenn.edu). 
+
+This mailing list email is: [TBD as of 11/6/20] 
 
 ## Getting Started (all new users)
 This section covers the initial steps you will need to take if you are new to the LPC which is managed by PMACS at UPenn. In summary, you will need (1) a PennKey, (2) request an LPC account
@@ -100,9 +106,20 @@ The terminal is best for submitting jobs and the GUI is best for navigating and 
 Note that it is also possible to configure WinSCP to automatically open a putty terminal upon connection.
 
 ### Logging in from MacOS
-**[To be filled in]**
+As mentioned in the above section, while MacOS built-in terminal is sufficient for submitting jobs, the Cyberduck GUI can be helpful for navigating the file structure.
+
 #### Using Cyberduck
-**[To be filled in]**
+- [Download](https://cyberduck.io/download/) Cyberduck
+- Ensure you are connected to VPN via PulseSecure
+- Open Cyberduck
+- Select `Open Connection` on the top left
+- In this window, select `SFTP (SSH File Transfer Protocol)`
+- Enter `sarlacc.pmacs.upenn.edu` under `'Server'`
+- Confirm `'Port' = 22`
+- Enter your PMACS username and password
+- Click `Connect`, and a GUI will open up allowing you to view the directory on the LPC (it should open you up to your home directory the first time logging on).
+
+<img src="images/cyberduck.png" width="700">
 
 ## Navigating the LPC from a command line
 Linux commands are needed to navigate the LPC from a terminal (e.g. PuTTY).
@@ -136,12 +153,11 @@ Alternatively if some application or package is not available or (for some reaso
 Be advised that PMACS provides very limited (if any) support when loading or using such installations on your own, so some troubleshooting may be required on your part.
 
 ## Using queues
-
 The first thing to understand before trying to schedule jobs are ‘queues’.
 At face value, a queue represents a set of pending jobs (i.e. a ‘container’ for jobs).
 On the LPC different queues are available to different user groups allowing them to run their jobs.
 You must be associated with, and have permission from, a specific user group (e.g. I2C2) in order to submit jobs to their associated queue.
-Each queue is set up by PMACS with their own set of rules, defaults, and access to specific execute hosts (i.e. the servers comprised of computing cores where individual jobs are run).
+Each queue is set up by PMACS with their own set of rules, defaults, and access to specific execute hosts (i.e. the servers comprised of computing cores where individual jobs are run). I2C2 queues are specified at the end of this section.
 
 There are a few general queue types offered by the LPC:
 
@@ -149,27 +165,25 @@ There are a few general queue types offered by the LPC:
 - `long`: For long running jobs (more than 24 hr).
 - `interactive`: For jobs that are run interactively.
 
+More information on queues in general is available here: https://wiki.pmacs.upenn.edu/pub/LSF_Basics
+
 I2C2 has it's own queues to which users can submit jobs. Currently there are very few rules/restrictions (e.g. maximum job runtime) for using each queue, however this may be updated in the future as needed by I2C2 faculty stakeholders. The I2C2 queues are as follows:
 
-- `i2c2_normal`
+- `i2c2_normal` This queue is the typical one used for most jobs which can be run on a single or multiple CPU cores.
 
-- `i2c2_interactive`
+- `i2c2_interactive` This queue is set up to specifically run interactive processes.
 
-- `i2c2gpu`
-
-
-
-More information on queues in general is available here:
-
-https://wiki.pmacs.upenn.edu/pub/LSF_Basics
+- `i2c2gpu` This queue is set up to run jobs on GPU cores.
 
 ## Submitting Jobs
-
 High performance parallel computing codes generally run in "batch" mode.
-Batch jobs are controlled by scripts written by the user and submitted to a batch system that manages the compute resource and schedules the job to run based on a set of policies.
-We use the term "job" to refer to a "batch job".
+Batch jobs are controlled by scripts written by the user and submitted to a batch system that manages the compute resource and schedules the job to run based on a set of policies. We use the term "job" to refer to a "batch job".
 
 Computing ‘jobs’ can be submitted individually from the command line, or you can write and run an executable script to submit multiple jobs to a queue simultaneously. 
+
+An example of a python script designed to run an exploratory data analysis either on a local machine or on the LPC is included in this repository:
+- `ExploratoryAnalysisMain.py`
+- `ExploratoryAnalysisJob.py`
 
 **IBM's LSF documentation is available here:**
 https://www.ibm.com/support/knowledgecenter/en/SSWRJV_10.1.0/lsf_welcome/lsf_welcome.html
@@ -180,11 +194,13 @@ https://www.ibm.com/support/knowledgecenter/en/SSWRJV_10.1.0/lsf_welcome/lsf_wel
 - [PMACS Wiki - LSF Basics](https://wiki.pmacs.upenn.edu/pub/LSF_Basics)
 - [PMACS Wiki - Batch Computing](https://wiki.pmacs.upenn.edu/pub/Batch_Computing)
 
-
-
 ## Best Practices
-Here we offer some 
-[TODO]
+Here we offer some suggestions for using the cluster so that the I2C2 community of researchers can maximize productivity and fairly share this resource.
+- Check that your jobs have completed within a reasonable amount of time. If they are running much longer than expected, make sure to 'kill' these jobs so that they do not run indefinitely on the cluster, hogging resources. 
+- Specify 'reserved' and 'maximum' memory limitations for your jobs. This will help you to avoid failed jobs due to hitting memory limits, and for us all to make the most efficient use of the LPC.
+- Avoid specifying unnecessarily large 'reserved' or 'maximum' memory limitations for jobs.  This is most important for 'reserved' memory limitations, as your job will take up more cores than may be necessary for it to run. This will reduce the total number of jobs that can be run on I2C2 by all users. 
+- Periodidally delete job submission files, files in your scratch folder, or files/data that are no longer needed.  This is mainly good practice for within your lab-group, as it impacts your lab-groups storage limitations, but should not impact other lab groups.
+- If you plan to run a particularly computationally expensive and or time/consuming set of jobs, it would be helpful to send out an email to the I2C2 mailing list so that others can plan accordingly, as they may also have time sensitive jobs to run. 
 
 ## Miscellaneous Tips
 To avoid accidental deletion or overwriting of files it is recommended that you put these aliases in your .bashrc:
