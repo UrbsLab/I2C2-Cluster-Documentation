@@ -70,8 +70,7 @@ Type the following into your terminal command line:
 `ssh username@sarlacc.pmacs.upenn.edu`
 
 ### Logging in from Windows
-
-It is useful to install both the terminal and GUI software below.
+Various software is available to log in from Windows. We provide two examples below, and find it useful to install and use both the terminal and GUI software.
 The terminal is best for submitting jobs and the GUI is best for navigating and managing the file hierarchy and copying files to and from the LPC.
 
 - **Windows (Terminal): [Putty](https://www.chiark.greenend.org.uk/~sgtatham/putty/)**
@@ -101,13 +100,11 @@ The terminal is best for submitting jobs and the GUI is best for navigating and 
 Note that it is also possible to configure WinSCP to automatically open a putty terminal upon connection.
 
 ### Logging in from MacOS
-
+**[To be filled in]**
 #### Using Cyberduck
-
-**[TODO]**
+**[To be filled in]**
 
 ## Navigating the LPC from a command line
-
 Linux commands are needed to navigate the LPC from a terminal (e.g. PuTTY).
 See the following link for an overview of basic Linux commands: 
 
@@ -130,30 +127,37 @@ Depending on what you want to run on the LPC, you may need to install various ap
 To avoid confusion and keep things centralized, PMACS installs and manages common applications in a shared central directory that are available to all the hosts in our cluster.
 The LPC terms these environmental elements as ‘modules’.
 Modules can be loaded or unloaded to be made available in your run environment.
-This means that these modules will be available if you were to run a program locally on `sarlacc`, or when you submit a job from a given host (i.e., `sarlacc` or `scisub`).
+This means that these modules will be available if you were to run a program locally on 'sarlacc', or when you submit a job from a given host (i.e., 'sarlacc' or 'scisub').
 Terminal commands for working with modules are available at this link:
 
 https://wiki.pmacs.upenn.edu/pub/LPC#Modules
 
-Alternatively if some application or package is not available or (for some reason) can’t be installed by PMACS under modules, you can install such packages or applications in your home directory (assuming you are logged onto `sarlacc`!).
-Be advised that PMACS provides very limited (if any) support when loading or using such installations on your own.
+Alternatively if some application or package is not available or (for some reason) can’t be installed by PMACS under modules, you can install such packages or applications in your home directory (assuming you are logged onto 'sarlacc'! and not 'scisub').
+Be advised that PMACS provides very limited (if any) support when loading or using such installations on your own, so some troubleshooting may be required on your part.
 
 ## Using queues
 
 The first thing to understand before trying to schedule jobs are ‘queues’.
 At face value, a queue represents a set of pending jobs (i.e. a ‘container’ for jobs).
 On the LPC different queues are available to different user groups allowing them to run their jobs.
-You must be associated with, and have permission from, a specific user group in order to submit jobs to their associated queue.
+You must be associated with, and have permission from, a specific user group (e.g. I2C2) in order to submit jobs to their associated queue.
 Each queue is set up by PMACS with their own set of rules, defaults, and access to specific execute hosts (i.e. the servers comprised of computing cores where individual jobs are run).
-Moore lab queues are described at the following link:
 
-https://wiki.pmacs.upenn.edu/pub/Epistasis_lab
-
-There are a few general queue types:
+There are a few general queue types offered by the LPC:
 
 - `normal`: For most jobs.
 - `long`: For long running jobs (more than 24 hr).
 - `interactive`: For jobs that are run interactively.
+
+I2C2 has it's own queues to which users can submit jobs. Currently there are very few rules/restrictions (e.g. maximum job runtime) for using each queue, however this may be updated in the future as needed by I2C2 faculty stakeholders. The I2C2 queues are as follows:
+
+- `i2c2_normal`
+
+- `i2c2_interactive`
+
+- `i2c2gpu`
+
+
 
 More information on queues in general is available here:
 
