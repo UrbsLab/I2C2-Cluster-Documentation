@@ -7,6 +7,7 @@
   - [LPC](#lpc)
   - [I2C2](#i2c2)
     - [I2C2 Mailing List](#i2c2-mailing-list)
+  - [Contacts](#contacts)
 - [Getting Started (all new users)](#getting-started)
 - [Logging Into The LPC](#logging-into-the-lpc)
   - [Logging in from Linux:](#logging-in-from-linux)
@@ -42,6 +43,12 @@ In order to facilitate communication between stakeholders and users of I2C2, a U
 You must request access to this mailing list if you are not already on it. This mailing list is managed by Kenneth Hassinger (khas@pennmedicine.upenn.edu). 
 
 This mailing list email is: [TBD as of 11/6/20] 
+
+### Contacts
+A list of PMACS contacts for I2C2 management and troubleshooting.
+- Nathanael DiGiorgio: nathansd@upenn.edu
+- Curt Calafut: calafutc@upenn.edu
+- Christopher Dymek: dymekc@upenn.edu
 
 ## Getting Started (all new users)
 This section covers the initial steps you will need to take if you are new to the LPC which is managed by PMACS at UPenn. In summary, you will need (1) a PennKey, (2) request an LPC account
