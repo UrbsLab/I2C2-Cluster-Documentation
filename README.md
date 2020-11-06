@@ -101,6 +101,8 @@ The terminal is best for submitting jobs and the GUI is best for navigating and 
 - A terminal will open up requesting your username (if you didn’t save it in step 5).
 - Lastly you will be prompted for your password.
 
+<img src="images/putty.png" width="700">
+
 **Logging in with WinSCP:**
 - Ensure you are connected to VPN via PulseSecure.
 - Open WinSCP software
@@ -111,6 +113,8 @@ The terminal is best for submitting jobs and the GUI is best for navigating and 
 - Click ‘Login’ to connect, and a GUI will open up allowing you to view both your local PC’s directory as well as the directory on the LPC (it should open you up to your home directory the first time logging on).
 
 Note that it is also possible to configure WinSCP to automatically open a putty terminal upon connection.
+
+<img src="images/winscp.png" width="700">
 
 ### Logging in from MacOS
 As mentioned in the above section, while MacOS built-in terminal is sufficient for submitting jobs, the Cyberduck GUI can be helpful for navigating the file structure.
