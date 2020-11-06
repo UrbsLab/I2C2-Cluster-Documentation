@@ -7,7 +7,7 @@
   - [LPC](#lpc)
   - [I2C2](#i2c2)
     - [I2C2 Mailing List](#i2c2-mailing-list)
-  - [Contacts](#contacts)
+    - [Contacts](#contacts)
 - [Getting Started (all new users)](#getting-started)
 - [Logging Into The LPC](#logging-into-the-lpc)
   - [Logging in from Linux:](#logging-in-from-linux)
@@ -44,7 +44,7 @@ You must request access to this mailing list if you are not already on it. This 
 
 This mailing list email is: [TBD as of 11/6/20] 
 
-### Contacts
+#### Contacts
 A list of PMACS contacts for I2C2 management and troubleshooting.
 - Nathanael DiGiorgio: nathansd@upenn.edu
 - Curt Calafut: calafutc@upenn.edu
