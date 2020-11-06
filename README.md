@@ -25,6 +25,7 @@
   - [PMACS software module commands](#pmacs-software-module-commands)
   - [Miscellaneous commands](#miscellaneous-commands)
   - [Sample job script](#sample-job-script)
+- [I2C2 Example Grant Text](#i2c2-example-grant-text)
 
 ## Introduction
 ### LPC
@@ -246,3 +247,9 @@ Assuming this is saved to a file named `script.sh`, you can submit the job by ru
 ```bash
 $ bsub < script.sh
 ```
+## I2C2 Example Grant Text
+Newly available as of July 2020, is the Informatics Investigator Computing Cluster (I2C2), a dedicated resource for faculty stakeholders (including Dr. XXXXX) within the Department of Informatics, similarly managed by PMACS, with 384 virtual cores each with 6 Gb of RAM.
+
+*I2C2 Parallel Computing Resource*
+The I2C2 is a dedicated resource shared by faculty stakeholders in the Division of Informatics. It consists of four dedicated physical compute servers: 3 Dell PowerEdge R6525 hosts (each with 2 AMD DPYC 7742 64-Core Processors and 768GB DDR4 RAM), and 1 Supermicro SYS-4029GP-TRT2 GPU core including 2 Intel Xeon Gold 6226 Processors, 128 GB DDR4 RAM, and 10 NVIDIA GeFORCE RTX 2080Ti graphics cards. In total the dedicated compute components of the enviornment include include 408 processing cores (816 threads), 43,520 CUDA cores, and nearly 2.5 TB (2,432 GB) of RAM. The cluster employs IBM Spectrum LSF for job scheduling, and each host in the environment runs CentOS 7.  File storage is provided by dedicated NFS v4 servers on VMware Virtual Machines.  The environment is hosted in the Brownstown Data Center and is managed by a team of full-time systems administrators. The Brownstown Data Center is Lancaster General Health’s (a division of Penn Medicine) 24 x 7 primary data center supporting Tier 1 mission critical and patient safety production systems.  It has Tier 3 data center capability, which includes N+1 redundant and maintainable capability for all components including fire suppression, dual generators with fuel capacity for three days,  redundant UPS’, and five separate CRAC units with separate chillers, maximizing environmental and system uptime.  It has access controls for entry including security cameras covering door entry, interior data center views as well as cameras around the facility.
+
