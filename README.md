@@ -1,6 +1,6 @@
 # I2C2 Cluster Documentation
 
-*Written by Ryan Urbanowicz in collaboration with the Moore Lab (https://github.com/EpistasisLab)
+*Written by Ryan Urbanowicz in collaboration with members of the Moore Lab (https://github.com/EpistasisLab)
 
 ## Contents
 - [Introduction](#introduction)
@@ -25,12 +25,14 @@
   - [Sample job script](#sample-job-script)
 
 ## Introduction
-
+### LPC
 The LPC (Limited Performance Computing) is a shared computing resource with a large number of processing cores upon which different computational tasks can be run.
 The LPC can be used to run computing processes that require a larger amount of memory that most PCs or laptops have available, as well as to run many processes simultaneously (on separate computing cores) and thus parallelize a large number of computational tasks.
 Each computing process (e.g., running a machine learning algorithm on a dataset), can be submitted (as a ‘job’) to an appropriate LPC queue (i.e. a program that manages the running of jobs from different users on cores of the LPC.
 Each user of the LPC is set up with a home directory within which they can put the code or data they wish to run, and within which job outputs can be saved.
 In order to use the LPC you will need to learn how to access it, how to navigate to your home directory, basic unix/linux commands, how to set up your ‘environment’ (so that the software, coding languages, and packages you will need are available to run your job, how to submit a job to a queue, how to manage and monitor your jobs, and best practices for LPC use.
+### I2C2
+The Informatics Investigator Computing Cluster (I2C2) is a subset of computing resources located within the LPC collaboratively purchased and utilized by a group of Informatics faculty stakeholders (at UPenn) with access granted by these stakeholders to students, staff, and occasional collaborators associated with their respective labs. While the purchase and maintenence of this resouce is funded by the stakeholders, there is no additional cost to running individual computing jobs or for data storage space (up to the aloted storage space each faculty member has requested). As of 11/6/2020, this resource does not meet the strict requirements for HIPPA security to protect sensitive patient data, however this may change in the future. This makes it an excellent place to test out code before running it on other secure computing resources, or run processes not working with sensitive patient data. Both CPU and GPU processors are available in I2C2. 
 
 ## Links and other resources
 
