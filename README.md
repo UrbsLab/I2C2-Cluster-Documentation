@@ -1,6 +1,6 @@
-# LPC Documentation for the Epistasis Lab
+# I2C2 Cluster Documentation
 
-*Written by members (and friends) of the lab.*
+*Written by Ryan Urbanowicz in collaboration with the Moore Lab (https://github.com/EpistasisLab)
 
 ## Contents
 
