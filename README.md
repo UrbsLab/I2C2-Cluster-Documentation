@@ -4,7 +4,7 @@
 
 ## Contents
 
-- [LPC Documentation for the Epistasis Lab](#lpc-documentation-for-the-epistasis-lab)
+- [LPC Cluster Documentation](#i2c2-cluster-documentation)
   - [Contents](#contents)
   - [Introduction](#introduction)
   - [Links and other resources](#links-and-other-resources)
