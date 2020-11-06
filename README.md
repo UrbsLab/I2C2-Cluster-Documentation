@@ -6,19 +6,19 @@
 - [Introduction](#introduction)
   - [LPC](#lpc)
   - [I2C2](#i2c2)
-- [Links and other resources](#links-and-other-resources)
 - [Getting Started (e.g., new students)](#getting-started-eg-new-students)
-- [Logging into the LPC](#logging-into-the-lpc)
+- [Logging Into The LPC](#logging-into-the-lpc)
   - [Logging in from Linux:](#logging-in-from-linux)
   - [Logging in from Windows](#logging-in-from-windows)
   - [Logging in from MacOS](#logging-in-from-macos)
     - [Using Cyberduck](#using-cyberduck)
-- [Navigating the LPC from a command line](#navigating-the-lpc-from-a-command-line)
-- [Customizing your environment](#customizing-your-environment)
-- [Using queues](#using-queues)
+- [Navigating the LPC from a Command Line](#navigating-the-lpc-from-a-command-line)
+- [Customizing Your Environment](#customizing-your-environment)
+- [Using Queues](#using-queues)
 - [Submitting Jobs](#submitting-jobs)
-- [Best practices](#best-practices)
-- [Miscellaneous tips](#miscellaneous-tips)
+- [Links and Other Resources](#links-and-other-resources)
+- [Best Practices](#best-practices)
+- [Miscellaneous Tips](#miscellaneous-tips)
 - [Troubleshooting](#troubleshooting)
 - [LPC Commands Cheat Sheet](#lpc-commands-cheat-sheet)
   - [LSF (job scheduling system) commands](#lsf-job-scheduling-system-commands)
@@ -36,16 +36,7 @@ In order to use the LPC you will need to learn how to access it, how to navigate
 ### I2C2
 The Informatics Investigator Computing Cluster (I2C2) is a subset of computing resources located within the LPC collaboratively purchased and utilized by a group of Informatics faculty stakeholders (at UPenn) with access granted by these stakeholders to students, staff, and occasional collaborators associated with their respective labs. While the purchase and maintenence of this resouce is funded by the stakeholders, there is no additional cost to running individual computing jobs or for data storage space (up to the aloted storage space each faculty member has requested). As of 11/6/2020, this resource does not meet the strict requirements for HIPPA security to protect sensitive patient data, however this may change in the future. This makes it an excellent place to test out code before running it on other secure computing resources, or run processes not working with sensitive patient data. Both CPU and GPU processors are available in I2C2. 
 
-## Links and other resources
-
-- [PMACS Wiki - LPC](https://wiki.pmacs.upenn.edu/pub/LPC)
-
-- [PMACS Wiki - LSF Basics](https://wiki.pmacs.upenn.edu/pub/LSF_Basics)
-
-- [PMACS Wiki - Batch Computing](https://wiki.pmacs.upenn.edu/pub/Batch_Computing)
-
 ## Getting Started (e.g., new students)
-
 - **Step 1: Get your PennKey and request LPC account access.** If you don’t yet have a PennKey, please email medhelp@pennmedicine.upenn.edu to request one. Then, you can email Curt Calafut with your PennKey, CCing Jason, to request access to the LPC. You will be assigned an account username which will serve as the name of your home directory as well as be used to log onto the LPC. 
 - **Step 2: Set up VPN for off campus LPC access**.
 Notes:The LPC can be accessed (i.e. logged on to) online directly while on campus, but in order to log on (specifically the Moore lab’s sarlacc server) from off campus you will first need to connect to campus with a virtual private network (VPN).
@@ -172,14 +163,19 @@ Computing ‘jobs’ can be submitted individually from the command line, or you
 **IBM's LSF documentation is available here:**
 https://www.ibm.com/support/knowledgecenter/en/SSWRJV_10.1.0/lsf_welcome/lsf_welcome.html
 
-## Best practices
+## Links and other resources
+### PMACS Links
+- [PMACS Wiki - LPC](https://wiki.pmacs.upenn.edu/pub/LPC)
+- [PMACS Wiki - LSF Basics](https://wiki.pmacs.upenn.edu/pub/LSF_Basics)
+- [PMACS Wiki - Batch Computing](https://wiki.pmacs.upenn.edu/pub/Batch_Computing)
 
+
+
+## Best Practices
+Here we offer some 
 [TODO]
 
-## Miscellaneous tips
-
-[TODO]
-
+## Miscellaneous Tips
 To avoid accidental deletion or overwriting of files it is recommended that you put these aliases in your .bashrc:
 
 - alias rm='rm -i'
