@@ -169,11 +169,11 @@ More information on queues in general is available here: https://wiki.pmacs.upen
 
 I2C2 has it's own queues to which users can submit jobs. Currently there are very few rules/restrictions (e.g. maximum job runtime) for using each queue, however this may be updated in the future as needed by I2C2 faculty stakeholders. The I2C2 queues are as follows:
 
-- `i2c2_normal` This queue is the typical one used for most jobs which can be run on a single or multiple CPU cores.
+- `i2c2_normal` This queue is the typical one used for most jobs which can be run on a single or multiple CPU cores. 1 THREAD per job slot. Use -n option to request more.
 
-- `i2c2_interactive` This queue is set up to specifically run interactive processes.
+- `i2c2_interactive` This queue is set up to specifically run interactive processes. 1 THREAD per job slot. Use -n option to request more.
 
-- `i2c2gpu` This queue is set up to run jobs on GPU cores.
+- `i2c2_gpu` This queue is set up to run jobs on GPU cores. 1 THREAD per job slot. Use -n option to request more.
 
 ## Submitting Jobs
 High performance parallel computing codes generally run in "batch" mode.
