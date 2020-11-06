@@ -1,4 +1,4 @@
-# I2C2 Cluster Documentation
+# I2C2 Documentation
 
 *Written by Ryan Urbanowicz in collaboration with members of the Moore Lab (https://github.com/EpistasisLab)
 
