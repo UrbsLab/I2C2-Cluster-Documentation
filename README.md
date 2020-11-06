@@ -6,7 +6,7 @@
 - [Introduction](#introduction)
   - [LPC](#lpc)
   - [I2C2](#i2c2)
-- [Getting Started (e.g., new students)](#getting-started-eg-new-students)
+- [Getting Started (all new users)](#getting-started)
 - [Logging Into The LPC](#logging-into-the-lpc)
   - [Logging in from Linux:](#logging-in-from-linux)
   - [Logging in from Windows](#logging-in-from-windows)
@@ -34,19 +34,20 @@ Each computing process (e.g., running a machine learning algorithm on a dataset)
 Each user of the LPC is set up with a home directory within which they can put the code or data they wish to run, and within which job outputs can be saved.
 In order to use the LPC you will need to learn how to access it, how to navigate to your home directory, basic unix/linux commands, how to set up your ‘environment’ (so that the software, coding languages, and packages you will need are available to run your job, how to submit a job to a queue, how to manage and monitor your jobs, and best practices for LPC use.
 ### I2C2
-The Informatics Investigator Computing Cluster (I2C2) is a subset of computing resources located within the LPC collaboratively purchased and utilized by a group of Informatics faculty stakeholders (at UPenn) with access granted by these stakeholders to students, staff, and occasional collaborators associated with their respective labs. While the purchase and maintenence of this resouce is funded by the stakeholders, there is no additional cost to running individual computing jobs or for data storage space (up to the aloted storage space each faculty member has requested). As of 11/6/2020, this resource does not meet the strict requirements for HIPPA security to protect sensitive patient data, however this may change in the future. This makes it an excellent place to test out code before running it on other secure computing resources, or run processes not working with sensitive patient data. Both CPU and GPU processors are available in I2C2. 
+The Informatics Investigator Computing Cluster (I2C2) is a subset of computing resources located within the LPC collaboratively purchased and utilized by a group of informatics faculty stakeholders (at UPenn) with access granted by these stakeholders to students, staff, and occasional collaborators associated with their respective labs. While the purchase and maintenence of this resouce is funded by the stakeholders, there is no additional cost to running individual computing jobs or for data storage space (up to the aloted storage space each faculty member has requested). As of 11/6/2020, this resource does not meet the strict requirements for HIPPA security to protect sensitive patient data, however this is expected to change in the future. This makes it an excellent place to test out code before running it on other secure computing resources, or run processes not working with sensitive patient data. Both CPU and GPU processors are available in I2C2. Once you set up an I2C2 account you will have access to it's resources once you log onto an appropriate LPC server.
 
-## Getting Started (e.g., new students)
-- **Step 1: Get your PennKey and request LPC account access.** If you don’t yet have a PennKey, please email medhelp@pennmedicine.upenn.edu to request one. Then, you can email Curt Calafut with your PennKey, CCing Jason, to request access to the LPC. You will be assigned an account username which will serve as the name of your home directory as well as be used to log onto the LPC. 
-- **Step 2: Set up VPN for off campus LPC access**.
-Notes:The LPC can be accessed (i.e. logged on to) online directly while on campus, but in order to log on (specifically the Moore lab’s sarlacc server) from off campus you will first need to connect to campus with a virtual private network (VPN).
+## Getting Started (all new users)
+This section covers the initial steps you will need to take if you are new to the LPC which is managed by PMACS at UPenn. In summary, you will need (1) a PennKey, (2) request an LPC account
+- **Step 1: Get your PennKey and request LPC account access.** First, make sure that you have permission from an I2C2 faculty stakeholder to create an account. If you don’t yet have a PennKey, please email (medhelp@pennmedicine.upenn.edu) to request one. Assuming you have one, next email Curt Calafut (calafutc@upenn.edu) with your PennKey, CCing a respective informatics faculty stakeholder (i.e. your lab's PI) to request an I2C2\LPC account within that individuals lab group. You will be assigned an account username which will serve as the name of your home directory as well as be used to log onto the LPC. Your home directory and any hard drive space used will be linked to the faculty stakeholders account (and associated lab hard drive space limits). 
+- **Step 2: Set up VPN for off campus LPC access.**
+All LPC servers can be accessed (i.e. logged on to) directly while online on campus. However, in order to log on while off campus to certain servers (such as sarlacc) you will first need to connect to campus with a virtual private network (VPN).
   - First, make sure you enroll in [DUO Two-factor authentication](https://wiki.pmacs.upenn.edu/pub/HSRDC_Getting_Started#Duo_Two-Factor_Authentication). This is needed to access most online UPenn resources from off campus.
   - Next install the [Pulse Secure Software](https://www.med.upenn.edu/pmacs/assets/user-content/PMACS%20VPN%20%E2%80%93%20Mac%20OS%20Automated%20Install%20and%20Configuration%20(Preferred).pdf). Detailed instructions can be found [here](https://www.isc.upenn.edu/sites/default/files/pulse_secure_vpn_cc.pdf).
 - **Step 2 Alternative: You can access the LPC from off campus without VPN**.
-You can access either sciget.pmacs.upenn.edu or scisub.pmacs.upenn.edu without VPN and then from any of these you can ssh to sarlacc. You can also directly submit jobs to the LPC from scisub.pmacs.upenn.edu. Note however that there is talk about sciget and scisub only being available from the VPN in the future.
+You can access either sciget.pmacs.upenn.edu or scisub.pmacs.upenn.edu without VPN and then from any of these you can ssh to sarlacc. You can also directly submit jobs to the LPC from scisub.pmacs.upenn.edu without VPN. Note however that there is talk about sciget and scisub only being available from the VPN in the future (noted on 11/6/20).
 - **Step 3: Log onto VPN from off campus**. ([Instructions here](https://www.med.upenn.edu/pmacs/pulseduo.html)).
 
-When each of these are complete, you should be able to log into the LPC using the instructions that follow. Note: You'll need to log into 
+When each of these are complete, you should be able to log into the LPC using the instructions that follow. 
 
 ## Logging into the LPC
 
@@ -60,6 +61,7 @@ sciget (sciget.pmacs.upenn.edu): you can ssh to it and it has outbound network a
 transfer (transfer.pmacs.upenn.edu) is used for transferring files from LPC to a local machine (sftp, scp and rsync). You cannot ssh to it.
 
 ### Logging in from Linux:
+Type the following into your terminal command line:
 `ssh username@sarlacc.pmacs.upenn.edu`
 
 ### Logging in from Windows
