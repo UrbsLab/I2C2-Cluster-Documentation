@@ -4,6 +4,8 @@
 
 ## Contents
 - [Introduction](#introduction)
+  - [LPC](#lpc)
+  - [I2C2](#i2c2)
 - [Links and other resources](#links-and-other-resources)
 - [Getting Started (e.g., new students)](#getting-started-eg-new-students)
 - [Logging into the LPC](#logging-into-the-lpc)
