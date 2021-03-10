@@ -56,7 +56,7 @@ This section covers the initial steps you will need to take if you are new to th
 - **Step 2: Set up VPN for off campus LPC access.**
 All LPC servers can be accessed (i.e. logged on to) directly while online on campus. However, in order to log on while off campus to certain servers (such as sarlacc) you will first need to connect to campus with a virtual private network (VPN).
   - First, make sure you enroll in [DUO Two-factor authentication](https://wiki.pmacs.upenn.edu/pub/HSRDC_Getting_Started#Duo_Two-Factor_Authentication). This is needed to access most online UPenn resources from off campus.
-  - Next install the [Pulse Secure Software](https://www.med.upenn.edu/pmacs/assets/user-content/PMACS%20VPN%20%E2%80%93%20Mac%20OS%20Automated%20Install%20and%20Configuration%20(Preferred).pdf). Detailed instructions can be found [here](https://www.isc.upenn.edu/sites/default/files/pulse_secure_vpn_cc.pdf).
+  - Next install the [Pulse Secure Software](https://www.med.upenn.edu/pmacs/assets/user-content/PMACS%20VPN%20%E2%80%93%20Mac%20OS%20Automated%20Install%20and%20Configuration%20(Preferred).pdf). Detailed instructions can be found [here](https://www.med.upenn.edu/dart/vpn-instructions.html).
 - **Step 2 Alternative: You can access the LPC from off campus without VPN**.
 You can access either sciget.pmacs.upenn.edu or scisub.pmacs.upenn.edu without VPN and then from any of these you can ssh to sarlacc. You can also directly submit jobs to the LPC from scisub.pmacs.upenn.edu without VPN. Note however that there is talk about sciget and scisub only being available from the VPN in the future (noted on 11/6/20).
 - **Step 3: Log onto VPN from off campus**. ([Instructions here](https://www.med.upenn.edu/pmacs/pulseduo.html)).
@@ -68,15 +68,19 @@ When each of these are complete, you should be able to log into the LPC using th
 To login to the LPC (and reach your home directory) you will need either a terminal program (i.e. command line) or (if preferred) a graphical user interface (GUI) program. These programs differ if you have Windows, Mac or Linux operating systems (OS). Please see the following link for your appropriate operating system and style of login: 
 https://wiki.pmacs.upenn.edu/pub/LPC  (Under ‘Login Software Installation’). OS specific examples are provided later in the subsections below. 
 
-Once you have an appropriate program (if needed), you will use it to log on to a server (in this case, one that is used by I2C2). This file server/host is a head node, from which you can navigate to any LPC directories (including your home) and submit jobs.  There are currently a few servers that may be relevant to this group for LPC job submissions, they are called 'scisub', 'sciget', and 'transfer'. Additionally, the 'sarlacc' server is available to those working with the Moore lab. Using scisub is most common. 
+Once you have an appropriate program (if needed), you will use it to log on to a server (in this case, one that is used by I2C2). This file server/host is a head node, from which you can navigate to any LPC directories (including your home) and submit jobs.  There are currently a few servers that may be relevant to this group for LPC job submissions, they are called 'I2c2sub', 'scisub', 'sciget', and 'transfer'. Additionally, the 'sarlacc' server is available to those working with the Moore lab. Using I2c2wsub is recommended. 
 
-- scisub (`scisub.pmacs.upenn.edu`) is the submit host used by most LPC users.  It is open to the world (SSH only – i.e. a secure remote login protocol). As previously mentioned, from scisub you can also ssh to sarlacc.  Note that unlike sarlacc, scisub is a virtual host with limited computing power.  It cannot be used to run local processes or manually install environment packages. 
+- I2c2sub (`I2c2sub.pmacs.upenn.edu`) is the virtual submit host created specifically for I2c2 users.  It is only accessible on campus or thorugh VPN. This server is very similar to scisub (below), i.e. it is a virtual host with limited computing power, so jobs cannot be run locally when logged on, however it is uniquely configured to allow manual installation of environment packages.
+- 
+- scisub (`scisub.pmacs.upenn.edu`) is the submit host used by most general LPC users.  It is open to the world (SSH only – i.e. a secure remote login protocol). As previously mentioned, from scisub you can also ssh to sarlacc.  Note that unlike sarlacc, scisub is a virtual host with limited computing power.  It cannot be used to run local processes or manually install environment packages. 
 
 - sarlacc (`sarlacc.pmacs.upenn.edu`) is only accessible on campus or through VPN.  This server is ‘beefier’ than others and has its own dedicated cores and storage space. This allows users to run ‘smaller’ computing processes directly on this head node (but this should be avoided).  It also allows users to install and manage their own ‘environment’.  For example if you wish to install the ‘anaconda’ package for running jobs you will need to log onto sarlacc. This server is owned by the Moore lab, and permission from Jason Moore is required for access. 
 
 - In addition, there are 2 other servers relevant to this group for the below tasks, but you cannot submit jobs to the LPC from these servers:
 sciget (`sciget.pmacs.upenn.edu`): you can ssh to it and it has outbound network access. Primarily useful for wget, git, svn, etc.
 transfer (`transfer.pmacs.upenn.edu`) is used for transferring files from LPC to a local machine (sftp, scp and rsync). You cannot ssh to it.
+
+For the loggin examples below we use `sarlacc` but this can be replaced with `I2c2sub` or the other host names. 
 
 ### Logging in from Linux:
 Type the following into your terminal command line:
