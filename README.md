@@ -37,7 +37,7 @@ Each computing process (e.g., running a machine learning algorithm on a dataset)
 Each user of the LPC is set up with a home directory within which they can put the code or data they wish to run, and within which job outputs can be saved.
 In order to use the LPC you will need to learn how to access it, how to navigate to your home directory, basic unix/linux commands, how to set up your ‘environment’ (so that the software, coding languages, and packages you will need are available to run your job, how to submit a job to a queue, how to manage and monitor your jobs, and best practices for LPC use.
 ### I2C2
-The Informatics Investigator Computing Cluster (I2C2) is a subset of computing resources located within the LPC collaboratively purchased and utilized by a group of informatics faculty stakeholders (at UPenn) with access granted by these stakeholders to students, staff, and occasional collaborators associated with their respective labs. While the purchase and maintenence of this resouce is funded by the stakeholders, there is no additional cost to running individual computing jobs or for data storage space (up to the aloted storage space each faculty member has requested). As of 11/6/2020, this resource does not meet the strict requirements for HIPPA security to protect sensitive patient data, however this is expected to change in the future. This makes it an excellent place to test out code before running it on other secure computing resources, or run processes not working with sensitive patient data. Both CPU and GPU processors are available in I2C2. Once you set up an I2C2 account you will have access to it's resources once you log onto an appropriate LPC server.
+The Informatics Investigator Computing Cluster (I2C2) is a subset of computing resources located within the LPC collaboratively purchased and utilized by a group of informatics faculty stakeholders (at UPenn) with access granted by these stakeholders to students, staff, and occasional collaborators associated with their respective labs. While the purchase and maintenence of this resouce is funded by the stakeholders, there is no additional cost to running individual computing jobs or for data storage space (up to the aloted storage space each faculty member has requested). As of 11/6/2020, this resource does not meet the strict requirements for HIPPA security to protect sensitive patient data, however this is expected to change in the future. This makes it an excellent place to test out code before running it on other secure computing resources, or run processes not working with sensitive patient data. Both CPU and GPU processors are available in I2C2. Once you set up an I2C2 account you will have access to it's resources once you log onto an appropriate LPC server. I2C2 is currently includes three compute hosts: 'colonial', 'consitution', and 'potholes'. Each has 128 virtual cores (384 total), each with 6 Gb of RAM. As such a maximum of 384 jobs can be running at once (assuming they all have reserved less than 6 Gb of RAM).
 #### I2C2 Mailing List
 In order to facilitate communication between stakeholders and users of I2C2, a UPenn mailing list has been set up to set up meetings, make announcements, ask questions and inform each other about planned computationally intensive cluster use. Please seek to use this mailing list somewhat sparingly.
 You must request access to this mailing list if you are not already on it. This mailing list is managed by Kenneth Hassinger (khas@pennmedicine.upenn.edu). 
@@ -243,10 +243,14 @@ If there is still issue connecting to sarlacc, try emptying the contents of the 
 | `bjobs -u ryanurb` | Show jobs for user `ryanurb` | 
 | `bkill 12345` | Kill job with ID `12345` |
 | `bkill 0` | Kill all jobs that belong to you |
-| `bhosts doi_exe` | Show server hosts |
-| `bhosts` | Show all hosts |
 | `bswitch` | Switch a job to a different queue |
-
+| `bhosts` | Show all hosts on LPC |
+| `bhosts i2c2_exe` | Show all hosts that are part of the I2C2 resources |
+| `bqueues` | Show activity of all queues on the LPC |
+| `bqueues i2c2_normal` | Show activity of the i2c2_normal queue, specifically |
+| `bqueues -l i2c2_normal` | Show details of the i2c2_normal queue including other users actively using queue |
+| `lsload` | Show overview of host CPU and RAM availability on LPC |
+| `lsload colonial` | Show overview of host CPU and RAM availability on 'colonial' host specifically |
 Some other LSF commands can be found [here](https://www.med.upenn.edu/hpc/assets/user-content/documents/lsf-quick-reference_user_commands.pdf).
 
 ### PMACS software module commands
