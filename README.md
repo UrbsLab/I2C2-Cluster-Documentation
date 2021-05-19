@@ -251,6 +251,13 @@ If there is still issue connecting to sarlacc, try emptying the contents of the 
 | `bqueues -l i2c2_normal` | Show details of the i2c2_normal queue including other users actively using queue |
 | `lsload` | Show overview of host CPU and RAM availability on LPC |
 | `lsload colonial` | Show overview of host CPU and RAM availability on 'colonial' host specifically |
+| `getent group ryanurblpc` | Show members of the 'URBS-lab' with access to I2C2 (i.e. ryanurblpc) |
+| `getent group bolandlpc` | Show member usernames of the 'Boland-lab' with access to I2C2 (i.e. bolandlpc) |
+| `getent group mowerylpc` | Show member usernames of the 'Mowery-lab' with access to I2C2 (i.e. mowerylpc) |
+| `getent group dokyoonlpc` | Show member usernames of the 'Kim-lab' with access to I2C2 (i.e. dokyoonlpc) |
+| `getent group lishenlpc` | Show member usernames of the 'Shen-lab' with access to I2C2 (i.e. lishenlpc) |
+| `getent group doilpc` | Show member usernames of other department of informatics users with access to I2C2 (i.e. doilpc) |
+
 Some other LSF commands can be found [here](https://www.med.upenn.edu/hpc/assets/user-content/documents/lsf-quick-reference_user_commands.pdf).
 
 ### PMACS software module commands
