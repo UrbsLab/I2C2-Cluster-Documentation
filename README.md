@@ -164,8 +164,20 @@ Terminal commands for working with modules are available at this link:
 
 https://wiki.pmacs.upenn.edu/pub/LPC#Modules
 
-Alternatively if some application or package is not available or (for some reason) can’t be installed by PMACS under modules, you can install such packages or applications in your home directory (assuming you are logged onto 'sarlacc'! and not 'scisub').
+Alternatively if some application or package is not available or (for some reason) can’t be installed by PMACS under modules, you can install such packages or applications in your home directory (assuming you are logged onto 'I2c2sub' or 'sarlacc'! and not 'scisub').
 Be advised that PMACS provides very limited (if any) support when loading or using such installations on your own, so some troubleshooting may be required on your part.
+
+### Installing Anaconda
+Anaconda is one commonly needed component of an environment. Anacaonda is a distribution of Python and R programming languages for scientific computing, that aims to simplify package management and deployment. The distribution includes data-science packages suitable for Windows, Linux, and macOS. Here we give instructions for downloading and installing Anaconda (which includes Python 3) within your LPC environment.  Once installed it is avaiable for both locally run commands as well for jobs submitted to the scheduler. These general instructions were obtained from: https://stackoverflow.com/questions/38080407/how-can-i-install-the-latest-anaconda-with-wget/50589896.
+
+* First download Anaconda (we recommend downloading the most recent stable version). Navigate to your home directory, then run the following:
+```
+wget https://repo.continuum.io/archive/Anaconda3-2020.07-Linux-x86_64.sh
+```
+* Then run the following line inside of the folder of the downloaded file to start the guided install..
+```
+bash Anaconda3-2020.07-Linux-x86_64.sh
+```
 
 ## Using queues
 The first thing to understand before trying to schedule jobs are ‘queues’.
