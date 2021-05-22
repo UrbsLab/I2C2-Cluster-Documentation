@@ -170,7 +170,7 @@ Be advised that PMACS provides very limited (if any) support when loading or usi
 ### Installing Anaconda
 Anaconda is one commonly needed component of an environment. Anacaonda is a distribution of Python and R programming languages for scientific computing, that aims to simplify package management and deployment. The distribution includes data-science packages suitable for Windows, Linux, and macOS. Here we give instructions for downloading and installing Anaconda (which includes Python 3) within your LPC environment.  Once installed it is avaiable for both locally run commands as well for jobs submitted to the scheduler. These general instructions were obtained from: https://stackoverflow.com/questions/38080407/how-can-i-install-the-latest-anaconda-with-wget/50589896.
 
-* First download Anaconda (we recommend downloading the most recent stable version). Navigate to your home directory, then run the following:
+* First download Anaconda. Navigate to your home directory, then run the following (these commands are for the 2020.07 version, however we recommend installing the most recent stable version available):
 ```
 wget https://repo.continuum.io/archive/Anaconda3-2020.07-Linux-x86_64.sh
 ```
